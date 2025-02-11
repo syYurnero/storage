@@ -29,8 +29,8 @@ ribbon:
   MaxAutoRetriesNextServer: 2
   MaxAutoRetries: 1
 mybatis:
-  mapper-locations: classpath:top/quhailong/pan/file/dao/mapping/*.xml
-  type-aliases-package: top.quhailong.pan.file.entity
+  mapper-locations: classpath:com/zyn/storage/file/dao/mapping/*.xml
+  type-aliases-package: com.zyn.storage.file.entity
 management:
   endpoints:
     web:

@@ -3,19 +3,19 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>top.quhailong.pan.parent</groupId>
+        <groupId>com.zyn.storage.parent</groupId>
         <artifactId>pan-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../pan-parent/pom.xml</relativePath>
     </parent>
 
-    <groupId>top.quhailong.pan.file</groupId>
+    <groupId>com.zyn.storage.file</groupId>
     <artifactId>pan-file-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <dependencies>
         <dependency>
-            <groupId>top.quhailong.pan.serviceapi</groupId>
+            <groupId>com.zyn.storage.serviceapi</groupId>
             <artifactId>pan-service-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
@@ -40,12 +40,12 @@
         </dependency>
         <!--redis -->
         <dependency>
-            <groupId>top.quhailong.pan.framework</groupId>
+            <groupId>com.zyn.storage.framework</groupId>
             <artifactId>pan-spring-boot-starter-redis</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>top.quhailong.pan.framework</groupId>
+            <groupId>com.zyn.storage.framework</groupId>
             <artifactId>pan-spring-boot-starter-web</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>

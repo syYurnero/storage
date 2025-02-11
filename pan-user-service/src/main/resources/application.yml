@@ -9,8 +9,8 @@ feign:
     enabled: true
 
 mybatis:
-  mapper-locations: classpath:top/quhailong/pan/user/dao/mapping/*.xml
-  type-aliases-package: top.quhailong.pan.user.entity
+  mapper-locations: classpath:com/zyn/storage/user/dao/mapping/*.xml
+  type-aliases-package: com.zyn.storage.user.entity
 management:
   endpoints:
     web:

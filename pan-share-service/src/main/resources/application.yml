@@ -11,8 +11,8 @@ eureka:
     leaseRenewalIntervalInSeconds: 4
     leaseExpirationDurationInSeconds: 5
 mybatis:
-  mapper-locations: classpath:top/quhailong/pan/share/dao/mapping/*.xml
-  type-aliases-package: top.quhailong.pan.share.entity
+  mapper-locations: classpath:com/zyn/storage/share/dao/mapping/*.xml
+  type-aliases-package: com.zyn.storage.share.entity
 management:
   endpoints:
     web:

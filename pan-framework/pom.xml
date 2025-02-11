@@ -8,12 +8,12 @@
         <module>pan-spring-boot-starter-web</module>
     </modules>
     <parent>
-        <groupId>top.quhailong.pan.parent</groupId>
+        <groupId>com.zyn.storage.parent</groupId>
         <artifactId>pan-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../pan-parent/pom.xml</relativePath>
     </parent>
-    <groupId>top.quhailong.pan.framework</groupId>
+    <groupId>com.zyn.storage.framework</groupId>
     <artifactId>pan-framework</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>

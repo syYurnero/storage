@@ -4,8 +4,8 @@ pagehelper:
   params: count=countSql
   reasonable: false
 mybatis:
-  mapper-locations: classpath:top/quhailong/pan/core/dao/mapping/*.xml
-  type-aliases-package: top.quhailong.pan.core.entity
+  mapper-locations: classpath:com/zyn/storage/core/dao/mapping/*.xml
+  type-aliases-package: com.zyn.storage.core.entity
 management:
   endpoints:
     web:
