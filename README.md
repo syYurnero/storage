@@ -1,0 +1,82 @@
+
+# NetworkDisk_Storage
+---
+## 郑重声明！！！
+因本人在B站看到有人将此毕业设计进行售卖，因此作出如下声明：  
+此系统为本人2018年的毕业设计，属于原创，本人允许开发者进行二次开发及传播，仅用于学习用途，不允许进行售卖，否则将追究受益人责任，请遵循GPL-v3.0协议，如需要商业用途，请联系作者   
+特此声明！
+## 描述
+基于SpringBoot和SpringCloud的网盘系统，与百度网盘相似
+## 采用技术
+本项目采用的SpringBoot和SpringCloud为最新版本（SpringBoot2.3.12.RELEASE和SpringCloud Hoxton.SR12）  
+数据加密采用JWT技术  
+持久层框架采用Mybatis  
+数据连接池采用druid  
+数据库采用MySQL  
+分布式缓存采用redis集群  
+文件存储服务器采用FastDFS集群  
+短信发送平台采用云之讯  
+项目总体使用MAVEN进行构建
+## 主要功能
+1.用户登录、注册  
+2.文件上传下载  
+3.新建文件夹、文件夹重命名  
+4.文件及文件夹的删除、复制、移动  
+5.文件分类展示  
+6.文件模糊搜索  
+7.文件公开或加密分享  
+8.容量展示  
+9.用户头像上传  
+10.用户修改密码及忘记密码  
+## 项目模块划分
+pan-common---通用组件   
+pan-core-page---系统核心页面  
+pan-core-service---系统核心服务  
+pan-core-gateway---系统核心服务网关  
+pan-edge-service---边缘系统（处理验证码，生成公钥，校验密码格式，发送短信）   
+pan-file-service---系统文件服务  
+pan-file-gateway---系统文件服务网关  
+pan-parent---MAVEN项目的总jar包管理  
+pan-service-api---系统微服务调用api管理  
+pan-regist-page---系统注册页面的展示服务  
+pan-share-service---文件分享服务  
+pan-user-service---系统用户服务  
+pan-framework---框架组件抽取  
+## 项目运行顺序
+1. 先在windows或linux平台安装nacos2.0.3，导入nacos_config.zip（nacos具体使用请百度，数据库配置和redis集群配置在common-config里面，需要将ip地址改为自己的，如果使用单机redis请修改配置中的redis节点配置参数结构）
+2. 将项目resources目录下bootstrap.yml文件中的nacos服务地址账号密码改成自己的。
+3. 将pan.sql导入到你的数据库中
+4. pan-parent、pan-common、pan-service-api和pan-framework需要install（按照顺序），之后启动其他模块（无顺序）  
+5. 短信参数配置在nacos配置user-service里（云之讯平台）
+http://localhost:8097/为主界面，数据库sql脚本和nacos配置均在工程根目录。  
+系统默认账户名：quhailong，密码123456
+6. 安装fastdfs组件的maven依赖，参照https://gitee.com/fastdfs100/fastdfs-client-java  
+fastdfs组件搭建参照：https://blog.csdn.net/prcyang/article/details/89946190  
+fastdfs配置文件在pan-file-service模块resource目录下的fdfs_client.conf中
+7. 修改pan-regist-page项目中的src/main/resources/static/js/config.js文件  
+- CORE_GATEWAY_URL为pan-core-gateway的url和端口
+- CORE_PAGE_URL为pan-core-page的url和端口
+8. 修改pan-core-page项目中的src/main/resources/static/assets2/js/config.js文件
+- CORE_GATEWAY_URL为pan-core-gateway的url和端口
+- CORE_FILE_GATEWAY_URL为pan-file-gateway的url和端口
+- CORE_PAGE_URL为pan-core-page的url和端口
+- REGIST_PAGE_URL为pan-regist-page的url和端口
+- FILE_URL为fastdfs的nginx(映射文件)，一般为80端口
+>注意：每个项目中的resources文件夹需要IDEA识别出来，否则不能读取配置文件  
+![Alt text](./9.png)
+## 系统部分截图
+![Alt text](./1.png)  
+![Alt text](./2.png)  
+![Alt text](./3.png)  
+![Alt text](./4.png)  
+![Alt text](./5.png)  
+![Alt text](./6.png)  
+![Alt text](./7.png)  
+![Alt text](./8.png)
+## tips
+项目有些地方还不太完善，如果有什么问题请联系  
+QQ：961584293  
+WX: ququhailong  
+邮箱:qhl961584293@163.com  
+如果觉得还行，就请点个赞把  
+感谢JetBrains提供的免费License

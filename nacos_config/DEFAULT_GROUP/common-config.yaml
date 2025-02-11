@@ -1,0 +1,67 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/pan?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+    # 连接池的配置信息
+    # 初始化大小，最小，最大
+    initialSize: 100
+    minIdle: 5
+    maxActive: 3000
+    # 配置获取连接等待超时的时间
+    maxWait: 60000
+    # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+    timeBetweenEvictionRunsMillis: 60000
+    # 配置一个连接在池中最小生存的时间，单位是毫秒
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    # 打开PSCache，并且指定每个连接上PSCache的大小
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+    filters: stat
+    # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+  redis:
+    password: quhailong
+    cluster:
+      nodes: 192.168.93.128:6379,192.168.93.128:6380,192.168.93.128:6381,192.168.93.128:6382,192.168.93.128:6383,192.168.93.128:6384
+      max-redirects: 3
+    lettuce:
+      pool:
+        ### 连接池最大连接数（使用负值表示没有限制）
+        max-active: 10000
+        ### 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: 10000
+        ### 连接池中的最大空闲连接
+        max-idle: 20
+        ### 连接池中的最小空闲连接
+        min-idle: 0
+    ### 连接超时时间（毫秒）
+    timeout: 60000
+feign:
+  hystrix:
+    #enabled设置为true,才能触发feign的熔断方法
+    enabled: true
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          #如果enabled设置为false，则请求超时交给ribbon控制,为true,则超时作为熔断根据
+          enabled: true
+        isolation:
+          strategy: THREAD
+          thread:
+            timeoutInMilliseconds: 8500 # feign调用微服务超时时间,它和ribbon的ReadTimeout谁小谁生效
+ribbon:
+  OkToRetryOnAllOperations: false   #只有get请求进行重试
+  MaxAutoRetriesNextServer: 1       #最大重试切换实例次数
+  MaxAutoRetries: 1                 #最大重试次数
+  ReadTimeout: 2000                 #读取超时时间
+  ConnectTimeout: 1000               #连接超时时间

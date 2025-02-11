@@ -1,0 +1,3 @@
+gateway-route-data-id=file-gateway-route-refresh.json
+gateway-route-group=DEFAULT_GROUP
+filter-url=/api/file

@@ -1,0 +1,3 @@
+gateway-route-data-id=gateway-route-refresh.json
+gateway-route-group=DEFAULT_GROUP
+filter-url=/api/user/logout,/api/user/changepwd,/api/user/loadimg,/api/user/uploadpic,/api/core

@@ -1,0 +1,25 @@
+{
+    "refreshGatewayRoute":true,
+    "routeList":[
+        {
+            "id":"file-service",
+            "predicates":[
+                {
+                    "name":"Path",
+                    "args":{
+                        "_genkey_0":"/api/file/**"
+                    }
+                }
+            ],
+            "filters":[
+                {
+                    "name":"StripPrefix",
+                    "args":{
+                        "_genkey_0":2
+                    }
+                }
+            ],
+            "uri":"lb://file-service"
+        }
+    ]
+}
