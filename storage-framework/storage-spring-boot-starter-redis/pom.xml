@@ -5,13 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.zyn.storage.framework</groupId>
-        <artifactId>pan-framework</artifactId>
+        <artifactId>storage-framework</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>pan-spring-boot-starter-redis</artifactId>
+    <artifactId>storage-spring-boot-starter-redis</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>pan-spring-boot-starter-redis</name>
+    <name>storage-spring-boot-starter-redis</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
@@ -24,7 +24,7 @@
     <dependencies>
         <dependency>
             <groupId>com.zyn.storage.common</groupId>
-            <artifactId>pan-common</artifactId>
+            <artifactId>storage-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>

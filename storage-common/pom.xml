@@ -3,13 +3,13 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.zyn.storage.parent</groupId>
-        <artifactId>pan-parent</artifactId>
+        <artifactId>storage-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../pan-parent/pom.xml</relativePath>
+        <relativePath>../storage-parent/pom.xml</relativePath>
     </parent>
 
     <groupId>com.zyn.storage.common</groupId>
-    <artifactId>pan-common</artifactId>
+    <artifactId>storage-common</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <dependencies>

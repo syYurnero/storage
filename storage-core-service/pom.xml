@@ -4,54 +4,32 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.zyn.storage.parent</groupId>
-        <artifactId>pan-parent</artifactId>
+        <artifactId>storage-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../pan-parent/pom.xml</relativePath>
+        <relativePath>../storage-parent/pom.xml</relativePath>
     </parent>
 
-    <groupId>com.zyn.storage.file</groupId>
-    <artifactId>pan-file-service</artifactId>
+    <groupId>com.zyn.storage.core</groupId>
+    <artifactId>storage-core-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <dependencies>
         <dependency>
-            <groupId>com.zyn.storage.serviceapi</groupId>
-            <artifactId>pan-service-api</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.csource</groupId>
-            <artifactId>fastdfs-client-java</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.slf4j</groupId>
-                    <artifactId>slf4j-log4j12</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <!-- dao -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid-spring-boot-starter</artifactId>
-        </dependency>
-        <!--redis -->
-        <dependency>
-            <groupId>com.zyn.storage.framework</groupId>
-            <artifactId>pan-spring-boot-starter-redis</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.zyn.storage.framework</groupId>
-            <artifactId>pan-spring-boot-starter-web</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.zyn.storage.framework</groupId>
+            <artifactId>storage-spring-boot-starter-web</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

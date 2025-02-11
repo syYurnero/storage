@@ -1,38 +1,32 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.zyn.storage.parent</groupId>
-        <artifactId>pan-parent</artifactId>
+        <artifactId>storage-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../pan-parent/pom.xml</relativePath>
+        <relativePath>../storage-parent/pom.xml</relativePath>
     </parent>
 
-    <groupId>com.zyn.storage.regist.page</groupId>
-    <artifactId>pan-regist-page</artifactId>
+    <groupId>com.zyn.storage.edge</groupId>
+    <artifactId>storage-edge-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>net.sourceforge.nekohtml</groupId>
-            <artifactId>nekohtml</artifactId>
-        </dependency>
         <!--redis -->
         <dependency>
             <groupId>com.zyn.storage.framework</groupId>
-            <artifactId>pan-spring-boot-starter-redis</artifactId>
+            <artifactId>storage-spring-boot-starter-redis</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.zyn.storage.framework</groupId>
-            <artifactId>pan-spring-boot-starter-web</artifactId>
+            <artifactId>storage-spring-boot-starter-web</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
+
     <build>
         <plugins>
             <plugin>

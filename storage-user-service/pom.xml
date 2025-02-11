@@ -4,20 +4,31 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.zyn.storage.parent</groupId>
-        <artifactId>pan-parent</artifactId>
+        <artifactId>storage-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../pan-parent/pom.xml</relativePath>
+        <relativePath>../storage-parent/pom.xml</relativePath>
     </parent>
 
-    <groupId>com.zyn.storage.share</groupId>
-    <artifactId>pan-share-service</artifactId>
+    <groupId>com.zyn.storage.user</groupId>
+    <artifactId>storage-user-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <dependencies>
         <dependency>
             <groupId>com.zyn.storage.serviceapi</groupId>
-            <artifactId>pan-service-api</artifactId>
+            <artifactId>storage-service-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!--redis -->
+        <dependency>
+            <groupId>com.zyn.storage.framework</groupId>
+            <artifactId>storage-spring-boot-starter-redis</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.zyn.storage.framework</groupId>
+            <artifactId>storage-spring-boot-starter-web</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
         <!-- dao -->
         <dependency>
@@ -33,9 +44,9 @@
             <artifactId>pagehelper-spring-boot-starter</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.zyn.storage.framework</groupId>
-            <artifactId>pan-spring-boot-starter-web</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
